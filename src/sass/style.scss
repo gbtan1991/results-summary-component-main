@@ -9,6 +9,25 @@ body{
     .result-summary{
         max-width: 46rem;
         display: grid;
+
+        .results, .summary{
+            padding: $padding-default;
+        }
+
+
+        .results{
+            color: $neutral-100t;
+            text-align: center;
+            overflow: hidden;
+            background: $gradient-primary;
+            border-radius: 0 0 $bor-rad-default $bor-rad-default;
+            
+        }
+
+
+        @media (min-width: 600px){
+            .results{border-radius: $bor-rad-default;}
+        }
     }
 
 
@@ -43,8 +62,11 @@ body{
 
     .result-summary{
         grid-template-columns: 1fr 1fr;
-        border-radius: 2rem;
+        border-radius: $bor-rad-default;
         box-shadow: .5rem 1rem 3rem $neutral-700t;
+        
     }
+
 }
+
 

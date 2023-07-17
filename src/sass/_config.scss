@@ -24,6 +24,7 @@ $secondary-500: hsl(241, 72%, 46%);
 
 //TRANSPARENT//
 $secondary-500t: hsl(241, 72%, 46%, 0);
+$neutral-100t: hsl(0, 0%, 100%, 0.7);
 $neutral-700t: hsl(224, 30%, 27%, 0.2);
 
 //NEUTRAL//
@@ -54,6 +55,10 @@ $fs-800: 2rem;
 $fs-900: 5rem;
 
 
+
+/* STRUCTURE */
+$bor-rad-default: 2rem;
+$padding-default: 2.5rem;
 
 
 
