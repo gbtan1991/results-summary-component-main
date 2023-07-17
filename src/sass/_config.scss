@@ -6,6 +6,52 @@
 }
 
 
+/* COLORS */
+
+
+//ACCENT//
+$accent1: hsl(0, 100%, 67%);
+$accent2: hsl(39, 100%, 56%);
+$accent3: hsl(166, 100%, 37%);
+$accent4: hsl(234, 85%, 45%);
+
+
+//PRIMARY//
+$primary-400: hsl(252, 100%, 67%);
+$primary-500: hsl(256, 72%, 46%);
+$secondary-400: hsl(241, 81%, 54%);
+$secondary-500: hsl(241, 72%, 46%);
+
+//TRANSPARENT//
+$secondary-500t: hsl(241, 72%, 46%, 0);
+$neutral-700t: hsl(224, 30%, 27%, 0.2);
+
+//NEUTRAL//
+$neutral-100: hsl(0, 0%, 100%);
+$neutral-200: hsl(221, 100%, 96%);
+$neutral-300: hsl(241, 100%, 89%);
+$neutral-700: hsl(224, 30%, 27%);
+
+
+
+
+$gradient-primary: linear-gradient($primary-400 , $secondary-400);
+$gradient-to-transparent: linear-gradient($primary-500, $secondary-500t);
+
+
+/* TYPOGRAPHY */
+$font-family-default: 'HankenGrotesk', sans-serif;
+
+$fw-regular: 500;
+$fw-bold: 700;
+$fw-black: 800;
+
+$fs-400: 1.125rem;
+$fs-500: 1.25rem;
+$fs-600: 1.5rem;
+$fs-700: 1.75rem;
+$fs-800: 2rem;
+$fs-900: 5rem;
 
 
 

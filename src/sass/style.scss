@@ -2,5 +2,49 @@
 @import "config";
 
 body{
-    font-family: 'HankenGrotesk', sans-serif;
+    font-family: $font-family-default;
+    font-size: $fs-400;
+    color: $neutral-700;
+
+    .result-summary{
+        max-width: 46rem;
+        display: grid;
+    }
+
+
+
+    .section-title{
+        font-weight: $fw-bold;
+        font-size: $fs-600;
+    }
+
+
+    .button{
+        color: $neutral-100;
+        line-height: 1;
+        background: $neutral-700;
+        padding: 1rem 2rem;
+        border: 0;
+        border-radius: 100vw;
+        cursor: pointer;
+
+        &:hover, &:focus-visible{
+            background: $gradient-primary;
+        }
+    }
 }
+
+@media (min-width: 600px){
+    body{
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+    }
+
+    .result-summary{
+        grid-template-columns: 1fr 1fr;
+        border-radius: 2rem;
+        box-shadow: .5rem 1rem 3rem $neutral-700t;
+    }
+}
+
