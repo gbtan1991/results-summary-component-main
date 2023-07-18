@@ -1,3 +1,4 @@
+
 @font-face{
     font-family: 'HankenGrotesk';
     font-display: swap;
@@ -16,6 +17,7 @@ $accent3: hsl(166, 100%, 37%);
 $accent4: hsl(234, 85%, 45%);
 
 
+
 //PRIMARY//
 $primary-400: hsl(252, 100%, 67%);
 $primary-500: hsl(256, 72%, 46%);
@@ -26,6 +28,11 @@ $secondary-500: hsl(241, 72%, 46%);
 $secondary-500t: hsl(241, 72%, 46%, 0);
 $neutral-100t: hsl(0, 0%, 100%, 0.7);
 $neutral-700t: hsl(224, 30%, 27%, 0.2);
+
+$accent1t: hsl(0, 100%, 67%, .1);
+$accent2t: hsl(39, 100%, 56%, .1);
+$accent3t: hsl(166, 100%, 37%, .1);
+$accent4t: hsl(234, 85%, 45%, .1);
 
 //NEUTRAL//
 $neutral-100: hsl(0, 0%, 100%);

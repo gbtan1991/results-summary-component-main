@@ -6,31 +6,8 @@ body{
     font-size: $fs-400;
     color: $neutral-700;
 
-    .result-summary{
-        max-width: 46rem;
-        display: grid;
 
-        .results, .summary{
-            padding: $padding-default;
-        }
-
-
-        .results{
-            color: $neutral-100t;
-            text-align: center;
-            overflow: hidden;
-            background: $gradient-primary;
-            border-radius: 0 0 $bor-rad-default $bor-rad-default;
-            
-        }
-
-
-        @media (min-width: 600px){
-            .results{border-radius: $bor-rad-default;}
-        }
-    }
-
-
+    
 
     .section-title{
         font-weight: $fw-bold;
@@ -51,6 +28,172 @@ body{
             background: $gradient-primary;
         }
     }
+
+
+
+    .grid-flow{
+        display: grid;
+        align-content: start;
+        gap: 1rem;
+        
+        &[data-spacing="large"]{
+            gap: 2rem;
+        }
+
+
+    }
+
+    .result-summary{
+        max-width: 46rem;
+        display: grid;
+
+      
+
+        .result{
+            color: $neutral-100t;
+            text-align: center;
+            padding: $padding-default calc($padding-default * 1.5) ;
+            overflow: hidden;
+            background: $gradient-primary;
+            border-radius: 0 0 $bor-rad-default $bor-rad-default;
+
+            &-score{
+                display: grid;
+                place-content: center;
+                width: 12rem;
+                margin-inline: auto;
+                background: $gradient-to-transparent;
+                aspect-ratio: 1 / 1;
+                border-radius: 50%;
+
+                & span{
+                    display: block;
+                    font-size: $fs-900;
+                    font-weight: $fw-black;
+                    line-height: 1;
+                    color: $neutral-100;
+                }
+                
+            }
+
+            &-rank{
+                color: $neutral-100;
+                font-size: $fs-700;
+                font-weight: $fw-bold;
+            }
+
+
+        }
+
+    
+        @media (min-width: 600px){
+            .result{border-radius: $bor-rad-default;}
+        }
+
+     
+
+
+    }
+
+    .summary{
+        padding: $padding-default;
+
+    }
+
+    .summary-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-radius: .5rem;
+        
+        .flex-group{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            flex-wrap: wrap;
+        }
+
+
+        /* REACTION */
+
+        &[data-item-type="accent-1"]{
+            background-color: $accent1t
+        }
+
+        &[data-item-type="accent-1"] svg{
+            stroke: $accent1;
+        }
+
+        &[data-item-type="accent-1"] .summary-item-title{
+            color: $accent1;
+            font-weight: $fw-bold;
+        }
+
+
+
+        /* MEMORY */
+        &[data-item-type="accent-2"]{
+            background-color: $accent2t
+        }
+
+        &[data-item-type="accent-2"] svg{
+            stroke: $accent2;
+        }
+
+        &[data-item-type="accent-2"] .summary-item-title{
+            color: $accent2;
+            font-weight: $fw-bold;
+        }
+
+
+        /* VERBAL */
+        &[data-item-type="accent-3"]{
+            background-color: $accent3t
+        }
+
+        &[data-item-type="accent-3"] svg{
+            stroke: $accent3;
+        }
+
+        &[data-item-type="accent-3"] .summary-item-title{
+            color: $accent3;
+            font-weight: $fw-bold;
+
+        }
+
+        /* VERBAL */
+        &[data-item-type="accent-4"]{
+            background-color: $accent4t
+        }
+
+        &[data-item-type="accent-4"] svg{
+            stroke: $accent4;
+        }
+
+        &[data-item-type="accent-4"] .summary-item-title{
+            color: $accent4;
+            font-weight: $fw-bold;
+        }
+
+        .summary-score {
+            font-weight: $fw-black;
+            color: $neutral-700t;
+        }
+
+        .summary-score span{
+            
+            color: $neutral-700;
+        }
+
+    }
+
+
+
+
+    
+
+
 }
 
 @media (min-width: 600px){
@@ -61,6 +204,7 @@ body{
     }
 
     .result-summary{
+        margin-inline: 1rem;
         grid-template-columns: 1fr 1fr;
         border-radius: $bor-rad-default;
         box-shadow: .5rem 1rem 3rem $neutral-700t;
