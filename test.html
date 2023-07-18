@@ -1,28 +1,26 @@
-fetch("./data.json")
-.then(response => response.json())
-.then(data =>{
-})
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch Data Example</title>
+</head>
+<body>
+  <div id="dataContainer"></div>
 
-
-.catch(error =>{
-    console.log(error);
-});
-
-
-
-
-
-    fetch('./data.json')
+  <script>
+    // Fetch the data from the server
+    fetch('data.json')
       .then(response => response.json())
       .then(data => {
         // Get the container element to append the data
-        const container = document.getElementById('summary');
+        const container = document.getElementById('dataContainer');
 
         // Iterate over the data and create HTML elements
         data.forEach(item => {
-          
+          // Create a div element to hold each item
+          const itemDiv = document.createElement('div');
+
           // Create an image element for the icon
-          const iconImg = document.getElementById('icon');
+          const iconImg = document.createElement('img');
           iconImg.src = item.icon;
 
           // Create a span element for the category
@@ -45,4 +43,6 @@ fetch("./data.json")
       .catch(error => {
         console.log('Error:', error);
       });
-
+  </script>
+</body>
+</html>
